@@ -3,7 +3,7 @@
         "rgblight": true
     },
     "split": {
-        "soft_serial_pin": "D2",
+        "soft_serial_pin": "GP1",
         "transport": {
             "sync": {
                 "matrix_state": true
