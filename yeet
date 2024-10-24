@@ -1,0 +1,1 @@
+make crkbd/rev1:vial && mv crkbd_rev1_vial.uf2 /mnt/c/Users/William/Desktop

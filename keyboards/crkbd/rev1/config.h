@@ -1,0 +1,23 @@
+#pragma once
+
+#define SPI_DRIVER SPID0
+#define SPI_SCK_PIN GP3
+#define SPI_MOSI_PIN GP2
+#define SPI_MISO_PIN NO_PIN
+
+#define OLED_DC_PIN GP8
+#define OLED_CS_PIN GP9
+
+#define OLED_DISPLAY_128X64
+/*
+#define OLED_DISPLAY_CUSTOM
+#define OLED_DISPLAY_WIDTH 68
+#define OLED_DISPLAY_HEIGHT 160
+#define OLED_MATRIX_SIZE 1360
+#define OLED_BLOCK_TYPE uint16_t
+#define OLED_BLOCK_COUNT 16
+#define OLED_BLOCK_SIZE 32
+#define OLED_COM_PINS COM_PINS_SEQ
+#define OLED_SOURCE_MAP {0}
+#define OLED_TARGET_MAP {0}
+*/
