@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -174,16 +175,21 @@ bool oled_task_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    static bool is_on = false;
   if (record->event.pressed) {
-        if (!is_on) {
-            oled_off();
-        } else {
-            oled_on();
-        }
-        is_on = !is_on;
     set_keylog(keycode, record);
   }
   return true;
 }
 #endif // OLED_ENABLE
+
+#include "cus.c"
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    static bool done = false;
+    if (!done) {
+        fuck();
+        done = true;
+        return false;
+    }
+    return true;
+}
